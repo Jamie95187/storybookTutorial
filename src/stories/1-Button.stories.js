@@ -1,6 +1,8 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
+import App from "../App"
 
 export default {
   title: 'Button',
@@ -16,3 +18,7 @@ export const Emoji = () => (
     </span>
   </Button>
 );
+
+storiesOf("App, module")
+  .add("default", () => <App />)
+  .add("with title", () => <App title="My World" />);
